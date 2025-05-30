@@ -1,6 +1,8 @@
+/* Imports */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap");
 
+/* Root Variables */
 :root {
   --primary-color: #6A4FA3;
   --accent-color: #FF7A30;
@@ -14,6 +16,8 @@
   --max-width: 1200px;
 }
 
+/* Global Styles */
+/* Reset and global styles for body, links, and lists */
 * {
   padding: 0;
   margin: 0;
@@ -35,6 +39,8 @@ ul {
   list-style: none;
 }
 
+/* Navigation Styles */
+/* Styles for the navigation bar and its elements */
 nav {
   position: fixed;
   isolation: isolate;
@@ -127,6 +133,8 @@ nav {
   }
 }
 
+/* Container Styles */
+/* General container styles for layout */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -136,6 +144,8 @@ nav {
   /* Adjust for navbar height */
 }
 
+/* Typography */
+/* Styles for headings, paragraphs, and text elements */
 .medium-black {
   font-size: 3rem;
   color: var(--dark-text);
@@ -164,6 +174,8 @@ nav {
   color: var(--accent-color);
 }
 
+/* Buttons */
+/* Styles for buttons like appointment button */
 .appointment-btn {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
@@ -175,6 +187,8 @@ nav {
   text-transform: uppercase;
 }
 
+/* Animations */
+/* Keyframes for animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -187,6 +201,8 @@ nav {
   }
 }
 
+/* Media Queries */
+/* Responsive styles for different screen sizes */
 @media (max-width: 768px) {
   .medium-black {
     font-size: 2.6rem;
@@ -205,8 +221,6 @@ nav {
     font-size: 1rem;
   }
 }
-
-
 
 .py-80 {
   padding: 80px 0;
@@ -241,6 +255,8 @@ nav {
   font-weight: 500;
 }
 
+/* Section: Service Banner */
+/* Styles for the service banner section */
 .service-banner {
   background-color: var(--primary-color);
   position: relative;
@@ -351,6 +367,8 @@ nav {
   padding: 1rem;
 }
 
+/* Section: Header */
+/* Styles for the header section with text and image */
 .header__container {
   display: flex;
   align-items: center;
@@ -407,7 +425,7 @@ nav {
 
   .medium-black {
     font-size: 2.2rem;
-    padding:  10px;
+    padding: 10px;
     margin-top: 0;
   }
 
@@ -424,6 +442,8 @@ nav {
   }
 }
 
+/* Section: Gallery */
+/* Styles for the gallery section */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -465,7 +485,8 @@ nav {
   }
 }
 
-/* Added styles for footer */
+/* Footer Styles */
+/* Styles for the footer and its elements */
 .footer {
   background-color: var(--text-dark);
   color: var(--white);
@@ -572,7 +593,8 @@ nav {
   font-size: 0.9rem;
 }
 
-/* Services Section */
+/* Section: Services */
+/* Styles for the services section and service cards */
 .services-section {
   padding: 5rem 1rem;
   background-color: var(--white);
@@ -855,7 +877,8 @@ p.subtitle {
   }
 }
 
-
+/* Section: Professionals */
+/* Styles for the professionals section */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -989,5 +1012,298 @@ p.subtitle {
 @media (max-width: 480px) {
   .appointment-btn {
     width: 100%;
+  }
+}
+
+
+
+
+.vet-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.vets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.vet-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6b35, #f7931e);
+}
+
+.vet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.vet-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.vet-avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.vet-info h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.vet-credentials {
+  color: #ff6b35;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.vet-experience {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.specializations {
+  margin-bottom: 25px;
+}
+
+.specializations h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.spec-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.spec-tag {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.spec-tag:hover {
+  background: #ff6b35;
+  color: white;
+  border-color: #ff6b35;
+}
+
+.achievements {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #ff6b35;
+}
+
+.achievements h4 {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.achievement-item {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.achievement-item::before {
+  content: '●';
+  color: #ff6b35;
+  position: absolute;
+  left: 0;
+}
+
+.achievement-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vet-section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .vets-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vet-card {
+    padding: 25px;
+  }
+
+  .vet-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vet-avatar {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .spec-tags {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .vet-card {
+    padding: 20px;
+  }
+
+  .vet-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vet-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.vet-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+.btn-container {
+  text-align: center;
+  margin: 20px 0;
+  color: black;
+}
+
+.view-more-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid orange;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.view-more-btn:hover {
+  background-color: rgb(246, 244, 241);
+  color: rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .view-more-btn {
+    width: 90%;
+    font-size: 18px;
   }
 }
